@@ -78,7 +78,7 @@ const mockWebViewHost: MWMWebViewHost = {
         return result;
     },
 
-    purchaseProduct: async (sku: string): Promise<PurchaseResult> => {
+    purchaseProduct: async (): Promise<PurchaseResult> => {
         // Simulate network delay
         await new Promise(resolve => setTimeout(resolve, 1500));
 
