@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import type { PaywallStore, PaywallPlan } from '../types/paywall';
-import type { MWMWebViewHost, ProductDetails, SubscriptionDetails } from '../types/webview-api';
+import type { SubscriptionDetails } from '../types/webview-api';
 
 // Mock data for development
 const mockPlans: PaywallPlan[] = [
@@ -98,7 +98,6 @@ const usePaywallStore = create<PaywallStore>((set, get) => ({
                 const isYearly = sku.includes('yearly');
                 const basePrice = (details as SubscriptionDetails).subscriptionPriceDetails.price;
                 const formattedPrice = (details as SubscriptionDetails).subscriptionPriceDetails.formattedPrice;
-                const introOffer = (details as SubscriptionDetails).introOffer;
 
                 return {
                     id: isYearly ? 'yearly' : 'monthly',
