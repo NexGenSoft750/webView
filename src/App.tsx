@@ -9,7 +9,7 @@ import './styles/main.scss';
 function App() {
   const {
     isInitialized,
-    isLoading,
+    // isLoading,
     error,
     showOnboarding,
     initialize
@@ -42,16 +42,16 @@ function App() {
   }, [initialize]);
 
   // Loading state
-  if (isLoading) {
-    return (
-      <div className="container">
-        <div className="loading">
-          <div className="spinner" />
-          <p className="loading-text">Loading...</p>
-        </div>
-      </div>
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <div className="container">
+  //       <div className="loading">
+  //         <div className="spinner" />
+  //         <p className="loading-text">Loading...</p>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   // Error state
   if (error && !isInitialized) {
